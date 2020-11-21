@@ -1,0 +1,69 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<jsp:include page="layouttopo.jsp"></jsp:include>
+	<c:set var="usuario" value="Admin"></c:set>
+	
+	<div class="bannersav text-center text-light">
+      <h1 style="padding: 54px;" class="txt-light font-weight-bold">Salvos</h1>
+    </div>
+    <div class="container">
+      <div class="busca">
+        <input type="text" name="buscar" id="buscar" placeholder="Bleach">
+        <button style="border-radius: 22px; position: absolute; margin: 0 0px 0 79px;" type="button"
+          class="btn procurar text-light">Buscar</button>
+
+        <button style="border-radius: 22px; " type="button" href="./Adicionar" class="btn procurar text-light">
+          <img src="" alt="">Adicionar novo</button>
+
+      </div>
+
+    </div>
+
+
+    <main class="container saveep">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="./img/imagens/784334.jpg" alt="Imagem de capa do card">
+        <div class="card-body">
+          <h5 class="card-title text-center titulo">Bleach</h5>
+          <div class="marcados">
+            <p class="card-text">Temporada - 9</p>
+            <p class="card-text">Episódio 275</p>
+          </div>
+          <div class="edits">
+            <a href="#" class="btn btnedit">Editar</a>
+            <a href="#" class="btn btn-outline-danger">Excluir</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="card " style="width: 18rem;">
+        <img class="card-img-top" src="./img/imagens/784334.jpg" alt="Imagem de capa do card">
+        <div class="card-body">
+          <h5 class="card-title text-center titulo">Bleach</h5>
+          <div class="marcados">
+            <p class="card-text">Temporada - 9</p>
+            <p class="card-text">Episódio 275</p>
+          </div>
+          <div class="edits">
+            <a href="#" class="btn btnedit">Editar</a>
+            <a href="#" class="btn btn-outline-danger">Excluir</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="./img/imagens/784334.jpg" alt="Imagem de capa do card">
+        <div class="card-body">
+          <h5 class="card-title text-center titulo">Bleach</h5>
+          <div class="marcados">
+            <p class="card-text">Temporada - 9</p>
+            <p class="card-text">Episódio 275</p>
+          </div>
+          <div class="edits">
+            <a href="#" class="btn btnedit">Editar</a>
+            <a href="#" class="btn btn-outline-danger">Excluir</a>
+          </div>
+
+        </div>
+      </div>
+    </main>
+	<jsp:include page="layoutrodape.jsp"></jsp:include>

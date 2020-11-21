@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SpringMVC</title>
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="/css/estilo.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Staatliches&display=swap"
+        rel="stylesheet">
+		<script src="js/jquery-3.2.1.slim.min.js"></script>
+		<script src="css/bootstrap/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+    <header>
+
+        <nav class="menu container">
+            <a class="logo" href="#"><img src="/imagens/icones/logo.svg" alt="logo"></a>
+            <ul class="links">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contato">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/salvos">Salvos</a>
+                </li>
+            </ul>
+            <div class="btns">
+                <a style="border-radius: 22px;" type="button" class="btn borda btn-danger"
+                    href="/login">Entrar</a>
+
+                <a style="border-radius: 22px;color: #fff;" type="button" class="btn btn-outline-danger text-light"
+                    href="/conta">Criar conta</a>
+            </div>
+
+            <div class="dropdown">
+                <a class="btn0" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/imagens/icones/menu.svg" alt="menu hamburgue">
+                </a>
+
+                <div class="dropdown-menu burgue" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="/index">Inicio</a>
+                    <a class="dropdown-item" href="/contato">Contato</a>
+                    <a class="dropdown-item" href="/sobre">Sobre</a>
+                    <a class="dropdown-item" href="/salvos">Salvos</a>
+                    <a class="dropdown-item" href="/login">Entrar</a>
+                    <a class="dropdown_item" href="/conta">Criar conta</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>

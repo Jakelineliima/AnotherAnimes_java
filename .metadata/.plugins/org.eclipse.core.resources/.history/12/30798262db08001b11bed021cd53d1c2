@@ -1,0 +1,28 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<jsp:include page="layouttopo.jsp"></jsp:include>
+	<c:set var="usuario" value="Admin"></c:set>
+	
+	 <main>
+        <div class="bannerlogin">
+           
+        </div>
+        <div class="titulo">
+            <h1>Login</h1>
+        </div>
+        <div class="formulario">
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                </div>
+                <button
+                    style="border-radius: 22px; background-color: #2e2759; color: #fff; font-weight: bold; font-family: 'Staatliches'; width: 100px;"
+                    type="submit" class="btn">LOGIN</button>
+            </form>
+        </div>
+    </main>
+    
+    <jsp:include page="layoutrodape.jsp"></jsp:include>
