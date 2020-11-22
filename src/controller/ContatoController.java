@@ -34,7 +34,7 @@ public class ContatoController {
 	public String minhasMsg(Model m) {
 		ContatoDAO dao = new ContatoDAO();
 		m.addAttribute("contato", dao.listarMsg());
-		return "contatomsg";
+		return "/contatomsg";
 		}
 	
 	@GetMapping("/alterarmgs")

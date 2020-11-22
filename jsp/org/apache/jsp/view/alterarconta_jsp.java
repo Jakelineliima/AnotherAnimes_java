@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class conta_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class alterarconta_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -67,23 +67,31 @@ public final class conta_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <h1>CRIE SUA CONTA E APROVEITE</h1>\r\n");
       out.write("        </div>\r\n");
       out.write("        <div class=\"formulario\">\r\n");
-      out.write("            <form class=\"container\" method=\"POST\" action=\"/conta\">\r\n");
+      out.write("            <form class=\"container\" method=\"POST\" action=\"/alterarconta\">\r\n");
       out.write("                <div class=\"form-group\">\r\n");
-      out.write("                \r\n");
+      out.write("                <input type=\"hidden\" name=\"codigo\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${conta.getCodigo()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" />\r\n");
       out.write("                    <input  type=\"text\" class=\"form-control\" id=\"exampleInputName\" aria-describedby=\"namelHelp\"\r\n");
-      out.write("                        placeholder=\"Nome\" name=\"nome\" />\r\n");
+      out.write("                        placeholder=\"Nome\" name=\"nome\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${conta.getNome()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" />\r\n");
       out.write("                        \r\n");
       out.write("                </div>\r\n");
       out.write("                <div class=\"form-group\">\r\n");
       out.write("                \r\n");
       out.write("                    <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\r\n");
-      out.write("                        placeholder=\"E-mail\" name=\"email\" />\r\n");
+      out.write("                        placeholder=\"E-mail\" name=\"email\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${conta.getEmail()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" />\r\n");
       out.write("                        \r\n");
       out.write("                </div>\r\n");
       out.write("                <div class=\"form-group\">\r\n");
       out.write("                \r\n");
       out.write("                    <input style=\"margin-bottom: 0;\" type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\"\r\n");
-      out.write("                        placeholder=\"Senha\" name=\"senha\" />\r\n");
+      out.write("                        placeholder=\"Senha\" name=\"senha\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${conta.getSenha()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" />\r\n");
       out.write("                        \r\n");
       out.write("                </div>\r\n");
       out.write("                <button style=\"border-radius: 22px; background-color: #2e2759; color: #fff; font-family: 'Staatliches';\"\r\n");

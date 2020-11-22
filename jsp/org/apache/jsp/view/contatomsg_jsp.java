@@ -62,7 +62,12 @@ public final class contatomsg_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_c_set_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\t<table class=\"table table-striped\">\r\n");
+      out.write("\t\r\n");
+      out.write("\t<div class=\"container\">\r\n");
+      out.write("\t\r\n");
+      out.write("\t<h5>Aqui esta suas mensagens enviadas</h5>\r\n");
+      out.write("\t\r\n");
+      out.write("\t<table class=\"table table-striped container\">\r\n");
       out.write("\t\t  <thead>\r\n");
       out.write("\t\t    <tr>\r\n");
       out.write("\t\t    <th scope=\"col\">Código</th>\r\n");
@@ -81,7 +86,7 @@ public final class contatomsg_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t  </tbody>\r\n");
       out.write("\t\t</table>\r\n");
       out.write("\t\r\n");
-      out.write("\t\r\n");
+      out.write("\t</div>\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "layoutrodape.jsp", out, false);
       out.write('	');
     } catch (Throwable t) {

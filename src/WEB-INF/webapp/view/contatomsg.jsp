@@ -1,7 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <jsp:include page="layouttopo.jsp"></jsp:include>
 	<c:set var="usuario" value="Admin"></c:set>
-	<table class="table table-striped">
+	
+	<div class="container">
+	
+	<h5>Aqui esta suas mensagens enviadas</h5>
+	
+	<table class="table table-striped container">
 		  <thead>
 		    <tr>
 		    <th scope="col">Código</th>
@@ -26,5 +31,5 @@
 		  </tbody>
 		</table>
 	
-	
+	</div>
 <jsp:include page="layoutrodape.jsp"></jsp:include>	

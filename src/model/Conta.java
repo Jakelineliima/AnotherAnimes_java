@@ -1,14 +1,11 @@
 package model;
 
-
 public class Conta {
-	private Integer id;
 	private int codigo;
 	private String nome;
 	private String email;
 	private String senha;
 	
-
 	public int getCodigo() {
 		return codigo;
 	}
@@ -33,12 +30,5 @@ public class Conta {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
 	
 }

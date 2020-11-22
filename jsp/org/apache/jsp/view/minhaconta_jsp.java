@@ -55,12 +55,32 @@ public final class minhaconta_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write('\n');
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "layouttopo.jsp", out, false);
       out.write("\r\n");
-      out.write("\t\r\n");
-      out.write("\t");
+      out.write("\r\n");
+      out.write("\t<div class=\"row container\">\r\n");
+      out.write("\r\n");
+      out.write("\t\t\r\n");
+      out.write("\t\t<table class=\"table table-striped\">\r\n");
+      out.write("\t\t  <thead>\r\n");
+      out.write("\t\t    <tr>\r\n");
+      out.write("\t\t      <th scope=\"col\">Código</th>\r\n");
+      out.write("\t\t      <th scope=\"col\">Nome</th>\r\n");
+      out.write("\t\t      <th scope=\"col\">Email</th>\r\n");
+      out.write("\t\t      <th scope=\"col\">Senha</th>\r\n");
+      out.write("\t\t      <th scope=\"col\">Alterar</th>\r\n");
+      out.write("\t\t      <th scope=\"col\">Excluir</th>\r\n");
+      out.write("\t\t    </tr>\r\n");
+      out.write("\t\t  </thead>\r\n");
+      out.write("\t\t  <tbody>\r\n");
+      out.write("\t\t\t");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
-      out.write('\r');
-      out.write('\n');
+      out.write("\r\n");
+      out.write("\t\t  </tbody>\r\n");
+      out.write("\t\t</table>\r\n");
+      out.write("\t\r\n");
+      out.write("\t\r\n");
+      out.write("\t</div>\r\n");
+      out.write("\t\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "layoutrodape.jsp", out, false);
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
@@ -84,36 +104,35 @@ public final class minhaconta_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
     _jspx_th_c_forEach_0.setVar("p");
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${conta}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${contas}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("\t<div class=\"\">\r\n");
-          out.write("\t<div class=\"card\" style=\"width: 18rem;\">\r\n");
-          out.write(" \t <div class=\"card-body\">\r\n");
-          out.write("    <h5 class=\"card-title\">Sua conta</h5>\r\n");
-          out.write("    <p class=\"card-text\">Nome - ");
+          out.write("\t\t\t  <tr>\r\n");
+          out.write("\t\t\t    <td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.getCodigo()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</td>\r\n");
+          out.write("\t\t\t\t<td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.getNome()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\r\n");
-          out.write("     ");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${session.usuarioLogado.nome }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</p>\r\n");
-          out.write("    <p class=\"card-text\"> Email - ");
+          out.write("</td>\r\n");
+          out.write("\t\t\t\t<td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.getEmail()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</p>\r\n");
-          out.write("    <a href=\"/alterarconta?codigo=");
+          out.write("</td>\r\n");
+          out.write("\t\t\t\t<td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.getSenha()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</td>\r\n");
+          out.write("\t\t\t\t<td><a href=\"/alterarconta?codigo=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.getCodigo()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" class=\"card-link\">Editar sua conta</a>\r\n");
-          out.write("    <a href=\"/excluirconta?codigo=");
+          out.write("\">Alterar</a></td>\r\n");
+          out.write("\t\t\t\t<td><a href=\"/excluirconta?codigo=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${p.getCodigo()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" class=\"card-link\">Excluir conta</a>\r\n");
-          out.write(" \t </div>\r\n");
-          out.write("\t</div>\r\n");
-          out.write("\t</div>\r\n");
-          out.write("\t");
+          out.write("\">Excluir</a></td>\r\n");
+          out.write("\t\t\t  </tr>\r\n");
+          out.write("\t\t\t  \r\n");
+          out.write("\t\t\t");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;

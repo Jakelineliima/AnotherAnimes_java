@@ -74,6 +74,9 @@ public final class layouttopo_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <li class=\"nav-item\">\r\n");
       out.write("                    <a class=\"nav-link\" href=\"/contatomsg\">Mensagems</a>\r\n");
       out.write("                </li>\r\n");
+      out.write("                <li class=\"nav-item\">\r\n");
+      out.write("                    <a class=\"nav-link\" href=\"/minhaconta\">Minha conta</a>\r\n");
+      out.write("                </li>\r\n");
       out.write("            </ul>\r\n");
       out.write("            <div class=\"btns\">\r\n");
       out.write("                <a style=\"border-radius: 22px;\" type=\"button\" class=\"btn borda btn-danger\"\r\n");

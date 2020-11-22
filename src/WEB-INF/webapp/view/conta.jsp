@@ -13,19 +13,19 @@
                 <div class="form-group">
                 
                     <input  type="text" class="form-control" id="exampleInputName" aria-describedby="namelHelp"
-                        placeholder="Nome" name="nome">
+                        placeholder="Nome" name="nome" />
                         
                 </div>
                 <div class="form-group">
                 
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="E-mail" name="email">
+                        placeholder="E-mail" name="email" />
                         
                 </div>
                 <div class="form-group">
                 
                     <input style="margin-bottom: 0;" type="password" class="form-control" id="exampleInputPassword1"
-                        placeholder="Senha" name="senha">
+                        placeholder="Senha" name="senha" />
                         
                 </div>
                 <button style="border-radius: 22px; background-color: #2e2759; color: #fff; font-family: 'Staatliches';"

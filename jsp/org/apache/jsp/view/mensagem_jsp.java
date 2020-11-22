@@ -46,7 +46,6 @@ public final class mensagem_jsp extends org.apache.jasper.runtime.HttpJspBase
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "layouttopo.jsp", out, false);
       out.write("\r\n");
       out.write("\r\n");
-      out.write("\r\n");
       out.write("      <div class=\"modal-body\">\r\n");
       out.write("        ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${texto}", java.lang.String.class, (PageContext)_jspx_page_context, null));

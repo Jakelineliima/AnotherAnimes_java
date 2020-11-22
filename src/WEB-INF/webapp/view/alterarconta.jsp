@@ -9,23 +9,23 @@
             <h1>CRIE SUA CONTA E APROVEITE</h1>
         </div>
         <div class="formulario">
-            <form class="container" method="POST" action="/conta">
+            <form class="container" method="POST" action="/alterarconta">
                 <div class="form-group">
-                
+                <input type="hidden" name="codigo" value="${conta.getCodigo()}" />
                     <input  type="text" class="form-control" id="exampleInputName" aria-describedby="namelHelp"
-                        placeholder="Nome" name="nome" />
+                        placeholder="Nome" name="nome" value="${conta.getNome()}" />
                         
                 </div>
                 <div class="form-group">
                 
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="E-mail" name="email" />
+                        placeholder="E-mail" name="email" value="${conta.getEmail()}" />
                         
                 </div>
                 <div class="form-group">
                 
                     <input style="margin-bottom: 0;" type="password" class="form-control" id="exampleInputPassword1"
-                        placeholder="Senha" name="senha" />
+                        placeholder="Senha" name="senha" value="${conta.getSenha()}" />
                         
                 </div>
                 <button style="border-radius: 22px; background-color: #2e2759; color: #fff; font-family: 'Staatliches';"

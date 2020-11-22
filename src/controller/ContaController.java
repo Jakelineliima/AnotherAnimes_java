@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-
 import dao.ContaDAO;
 import model.Conta;
 
@@ -28,21 +27,21 @@ public class ContaController {
 		ContaDAO dao = new ContaDAO();
 		String texto = dao.salvar(p);
 		m.addAttribute("texto", texto);
-		return "/conta";
+		return "mensagem";
 	}
 	
 	@GetMapping("/minhaconta")
-	public String minhaConta(Model m) {
+	public String minhaContas(Model m) {
 		ContaDAO dao = new ContaDAO();
-		m.addAttribute("conta", dao.listarConta());
+		m.addAttribute("contas", dao.listarConta());
 		return "minhaconta";
-		}
+	}
 	
 	@GetMapping("/alterarconta")
 	public String alterarConta(HttpServletRequest req, Model m) {
 		int codigo = Integer.parseInt(req.getParameter("codigo"));
 		ContaDAO dao = new ContaDAO();
-		m.addAttribute("conta", dao.getContaporCodigo(codigo));
+		m.addAttribute("conta", dao.getContaPorCodigo(codigo));
 		return "alterarconta";
 	}
 	
@@ -52,13 +51,13 @@ public class ContaController {
 		String nome = req.getParameter("nome");
 		String email = req.getParameter("email");
 		String senha = req.getParameter("senha");
-		Conta s = new Conta();
-		s.setCodigo(codigo);
-		s.setNome(nome);
-		s.setEmail(email);
-		s.setSenha(senha);
+		Conta p = new Conta();
+		p.setCodigo(codigo);
+		p.setNome(nome);
+		p.setEmail(email);
+		p.setSenha(senha);
 		ContaDAO dao = new ContaDAO();
-		m.addAttribute("texto", dao.salvar(s));
+		m.addAttribute("texto", dao.salvar(p));
 		return "mensagem";
 	}
 	
@@ -67,7 +66,7 @@ public class ContaController {
 		int codigo = Integer.parseInt(req.getParameter("codigo"));
 		ContaDAO dao = new ContaDAO();
 		m.addAttribute("texto", dao.excluir(codigo));
-		return"";
+		return"mensagem";
 	}
 	
 	

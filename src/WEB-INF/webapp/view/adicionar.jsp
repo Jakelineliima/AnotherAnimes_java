@@ -3,16 +3,19 @@
 	<c:set var="usuario" value="Admin"></c:set>
 	
 	    <div class="container adccont">
+	    
         <form class="adicionar" method="POST" action="/adicionar">
+            
             <h2>ADICIONE AQUI SEUS EPISÓDIOS ASSISTIDOS</h2>
+            
             <div class="adcimg">
                 
                 <label class="labelInput">	Adicione a imagem<input type="file" name="imagem" class="btn file_customizada"  accept="image/png, image/jpeg"  multiple/>
-      			 
-       			 
+
                 </label>
                <!--- <input type="file">--->
              </div>
+             
             <div class="enter">
                 <div class="inputs">
                     <input class="inputtitle" type="text" name="titulo" placeholder="Titulo">
@@ -29,11 +32,7 @@
         </div>
     
     <jsp:include page="layoutrodape.jsp"></jsp:include>
-    	 <script>
-   
-      
-
-    </script>
+    	
 	<style>
 	@media(max-width:999px){
 	.adicionar{

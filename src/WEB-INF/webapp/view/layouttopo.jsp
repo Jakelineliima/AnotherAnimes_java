@@ -31,6 +31,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/contatomsg">Mensagems</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/minhaconta">Minha conta</a>
+                </li>
             </ul>
             <div class="btns">
                 <a style="border-radius: 22px;" type="button" class="btn borda btn-danger"
