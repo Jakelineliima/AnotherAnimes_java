@@ -1,12 +1,15 @@
 package model;
 
+
 public class Adicionar {
 	private int codigo;
 	private String titulo;
 	private String temporada;
 	private String episodio;
 	private String imagem;
+
 	
+
 	public int getCodigo() {
 		return codigo;
 	}

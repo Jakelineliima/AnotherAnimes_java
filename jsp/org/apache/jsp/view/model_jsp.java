@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class mensagem_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class model_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -41,23 +41,25 @@ public final class mensagem_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write('\r');
-      out.write('\n');
-      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "layouttopo.jsp", out, false);
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("      <div class=\"modal-body\">\r\n");
-      out.write("        ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${texto}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\r\n");
+      out.write("<div class=\"modal\" tabindex=\"-1\" role=\"dialog\">\r\n");
+      out.write("  <div class=\"modal-dialog\" role=\"document\">\r\n");
+      out.write("    <div class=\"modal-content\">\r\n");
+      out.write("      <div class=\"modal-header\">\r\n");
+      out.write("        <h5 class=\"modal-title\">Título do modal</h5>\r\n");
+      out.write("        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Fechar\">\r\n");
+      out.write("          <span aria-hidden=\"true\">&times;</span>\r\n");
+      out.write("        </button>\r\n");
       out.write("      </div>\r\n");
-      out.write("    \r\n");
-      out.write("\r\n");
-      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "layoutrodape.jsp", out, false);
-      out.write("\r\n");
-      out.write("\r\n");
+      out.write("      <div class=\"modal-body\">\r\n");
+      out.write("        <p>Texto do corpo do modal, é aqui.</p>\r\n");
+      out.write("      </div>\r\n");
+      out.write("      <div class=\"modal-footer\">\r\n");
+      out.write("        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Fechar</button>\r\n");
+      out.write("        <button type=\"button\" class=\"btn btn-primary\">Salvar mudanças</button>\r\n");
+      out.write("      </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("  </div>\r\n");
+      out.write("</div>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

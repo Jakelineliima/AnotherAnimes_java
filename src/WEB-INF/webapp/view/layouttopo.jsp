@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 	<head>
 		<title>AnotherAnime</title>
+		<meta charset="utf-8"/>
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" href="/css/bootstrap/css/estilo.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Staatliches&display=swap"

@@ -43,9 +43,10 @@ public final class layouttopo_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
-      out.write("<html>\r\n");
+      out.write("<html lang=\"pt-br\">\r\n");
       out.write("\t<head>\r\n");
       out.write("\t\t<title>AnotherAnime</title>\r\n");
+      out.write("\t\t<meta charset=\"utf-8\"/>\r\n");
       out.write("\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/bootstrap/css/bootstrap.css\" />\r\n");
       out.write("\t\t<link rel=\"stylesheet\" href=\"/css/bootstrap/css/estilo.css\" />\r\n");
       out.write("\t\t<link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Staatliches&display=swap\"\r\n");

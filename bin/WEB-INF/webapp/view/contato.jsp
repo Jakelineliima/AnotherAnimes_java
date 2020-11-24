@@ -6,8 +6,6 @@
 </div>
 
 <form class="container contato" method="POST" action="/contato">
-<button type="button" class="btn btn-primary" data-toggle="modal"
-		data-target="#ModalLongoExemplo">Mensagens</button>
 	<div class="formcont">
 		<h2>Esta com problemas ou quer enviar uma opnião.</h2>
 		<div class="form">
@@ -28,8 +26,7 @@
 		</div>
 	</div>
 
-	<button style="border-radius: 22px;" type="submit"
-		class="btn btncont borda">Enviar</button>
+	<button style="border-radius: 22px;" type="submit" class="btn btncont borda">Enviar</button>
 
 </form>
 
@@ -53,38 +50,6 @@
 		</div>
 	</div>
 </div>
-
-
-<div class="modal fade" id="ModalLongoExemplo" tabindex="-1"
-	role="dialog" aria-labelledby="TituloModalLongoExemplo"
-	aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="TituloModalLongoExemplo">HOW WAS IT
-					CREATED ANOTHERANIMES?</h5>
-			</div>
-			<div class="modal-body">
-			<c:forEach var="p" items="${contato}">
-				<tr>
-					<td>${p.getCodigo()}</td>
-					<td>${p.getNome()}</td>
-					<td>${p.getEmail()}</td>
-					<td>${p.getMensagem()}</td>
-					<td><a href="/alterarmgs?codigo=${p.getCodigo()}">Alterar</a></td>
-					<td><a href="/excluirmgs?codigo=${p.getCodigo()}">Excluir</a></td>
-				</tr>
-			</c:forEach>
-			
-			</div>
-			
-			
-				<div class="modal-footer"></div>
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
-
 
 <jsp:include page="layoutrodape.jsp"></jsp:include>
 

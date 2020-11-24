@@ -12,12 +12,12 @@ import model.Contato;
 
 @Controller
 public class ContatoController {
-	
+
 	@GetMapping("/contato")
 	public String contato() {
 		return "contato";
 	}
-	
+
 	@PostMapping("/contato")
 	public String enviaMensagem(HttpServletRequest req, Model m) {
 		Contato p = new Contato();
@@ -29,14 +29,14 @@ public class ContatoController {
 		m.addAttribute("texto", texto);
 		return "mensagem";
 	}
-	
+
 	@GetMapping("/contatomsg")
 	public String minhasMsg(Model m) {
 		ContatoDAO dao = new ContatoDAO();
 		m.addAttribute("contato", dao.listarMsg());
 		return "/contatomsg";
-		}
-	
+	}
+
 	@GetMapping("/alterarmgs")
 	public String alterarMgs(HttpServletRequest req, Model m) {
 		int codigo = Integer.parseInt(req.getParameter("codigo"));
@@ -44,7 +44,7 @@ public class ContatoController {
 		m.addAttribute("contato", dao.getMgsporCodigo(codigo));
 		return "alterarmgs";
 	}
-	
+
 	@PostMapping("/alterarmgs")
 	public String atualizarMgs(HttpServletRequest req, Model m) {
 		int codigo = Integer.parseInt(req.getParameter("codigo"));
@@ -60,13 +60,13 @@ public class ContatoController {
 		m.addAttribute("texto", dao.salvar(p));
 		return "mensagem";
 	}
-	
+
 	@GetMapping("/excluirmgs")
 	public String excluirMgs(HttpServletRequest req, Model m) {
 		int codigo = Integer.parseInt(req.getParameter("codigo"));
 		ContatoDAO dao = new ContatoDAO();
 		m.addAttribute("texto", dao.excluir(codigo));
-		return"mensagem";
+		return "mensagem";
 	}
-	
+
 }
