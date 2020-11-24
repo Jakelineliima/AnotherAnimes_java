@@ -132,13 +132,12 @@ public final class salvos_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("      <div class=\"card\" style=\"width: 18rem;\">\r\n");
-          out.write("      <p>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.getCodigo()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</p>\r\n");
-          out.write("        <label  class=\"card-img-top\">");
+          out.write("      <div class=\"card\" style=\"width: 18rem; margin: 18px auto;\">\r\n");
+          out.write("        <label  class=\"card-img-top\">\r\n");
+          out.write("        <img src=\" ");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.getImagem()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</label>\r\n");
+          out.write("\">\r\n");
+          out.write("        </label>\r\n");
           out.write("        <div class=\"card-body\">\r\n");
           out.write("          <h5 class=\"card-title text-center titulo\">");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.getTitulo()}", java.lang.String.class, (PageContext)_jspx_page_context, null));

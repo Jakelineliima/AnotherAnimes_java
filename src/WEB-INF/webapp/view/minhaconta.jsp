@@ -1,36 +1,34 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <jsp:include page="layouttopo.jsp"></jsp:include>
 
-	<div class="row container">
+<div class="container">
 
-		
-		<table class="table table-striped">
-		  <thead>
-		    <tr>
-		      <th scope="col">Código</th>
-		      <th scope="col">Nome</th>
-		      <th scope="col">Email</th>
-		      <th scope="col">Senha</th>
-		      <th scope="col">Alterar</th>
-		      <th scope="col">Excluir</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-			<c:forEach var="p" items="${contas}">
-			  <tr>
-			    <td>${p.getCodigo()}</td>
-				<td>${p.getNome()}</td>
-				<td>${p.getEmail()}</td>
-				<td>${p.getSenha()}</td>
-				<td><a href="/alterarconta?codigo=${p.getCodigo()}">Alterar</a></td>
-				<td><a href="/excluirconta?codigo=${p.getCodigo()}">Excluir</a></td>
-			  </tr>
-			  
-			</c:forEach>
-		  </tbody>
-		</table>
-	
-	
-	</div>
-	
+
+
+	<c:forEach var="p" items="${contas}">
+		<div class="card text-center" style="margin: 120px auto;">
+			<div class="card-header">
+				<p>Seja bem vindo <h6>${p.getNome()}</h6> </p>
+			</div>
+			<div class="card-body">
+				<p class="card-text">${p.getEmail()}</p>
+				<a class="btn edit" href="/alterarconta?codigo=${p.getCodigo()}">Editar</a>
+				<a class="btn btn-danger"
+					href="/excluirconta?codigo=${p.getCodigo()}">Excluir</a>
+			</div>
+		</div>
+	</c:forEach>
+</div>
+
+<style>
+.edit {
+	background-color: #2E2759;
+	color: #fff;
+}
+.edit:hover{
+    background-color: #38325E;
+	color: #fff;
+}
+</style>
+
 <jsp:include page="layoutrodape.jsp"></jsp:include>

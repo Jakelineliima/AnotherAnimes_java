@@ -1,6 +1,5 @@
 package dao;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -68,6 +67,7 @@ public class AdicionarDAO {
 			e.printStackTrace();
 			return null;
 		}
+
 	}
 	
 	public Adicionar getSalvoPorCodigo(int codigo) {
@@ -104,26 +104,5 @@ public class AdicionarDAO {
 			e.printStackTrace();
 			return "Erro: "+ e.getMessage();
 		}
-	}
-	
-//	public Adicionar buscar(Integer codigo) throws SQLException {
-//		Adicionar retorno = null;
-//		String sql = "SELECT codigo, imagem FROM salvos where codigo=?";
-//		PreparedStatement pst = con.prepareStatement(sql);
-//		
-//		try {
-//			pst.setInt(1, codigo);
-//			ResultSet rs = pst.executeQuery();
-//			if(rs.next()) {
-//				retorno = new Adicionar();
-//				retorno.setCodigo(rs.getInt("codigo"));
-//				retorno.setImagem(rs.getString("imagem"));
-//			}
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//			retorno = null;
-//		}
-//		return retorno;
-//	}
-//		
+	}		
 }

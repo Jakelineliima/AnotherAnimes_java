@@ -15,9 +15,10 @@
       
     <div class=" saveep">
     <c:forEach var="s" items="${salvos}">
-      <div class="card" style="width: 18rem;">
-      <p>${s.getCodigo()}</p>
-        <label  class="card-img-top">${s.getImagem()}</label>
+      <div class="card" style="width: 18rem; margin: 18px auto;">
+        <label  class="card-img-top">
+        <img src=" ${s.getImagem()}">
+        </label>
         <div class="card-body">
           <h5 class="card-title text-center titulo">${s.getTitulo()}</h5>
           <div class="marcados">

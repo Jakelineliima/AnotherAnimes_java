@@ -13,7 +13,6 @@
                 <label class="labelInput">	Adicione a imagem<input type="file" name="imagem" class="btn file_customizada"  accept="image/png, image/jpeg"  multiple/>
 
                 </label>
-               <!--- <input type="file">--->
              </div>
              
             <div class="enter">
