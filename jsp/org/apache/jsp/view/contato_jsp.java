@@ -65,7 +65,7 @@ public final class contato_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("<form class=\"container contato\" method=\"POST\" action=\"/contato\">\r\n");
       out.write("\t<div class=\"formcont\">\r\n");
-      out.write("\t\t<h2>Esta com problemas ou quer enviar uma opniÃ£o.</h2>\r\n");
+      out.write("\t\t<h2>Esta com problemas ou quer enviar um elogio.</h2>\r\n");
       out.write("\t\t<div class=\"form\">\r\n");
       out.write("\t\t\t<div class=\"form-group\">\r\n");
       out.write("\t\t\t\t<input class=\"form-control\" id=\"\" placeholder=\"Nome:\" name=\"nome\"\r\n");

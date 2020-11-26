@@ -7,7 +7,7 @@
 
 <form class="container contato" method="POST" action="/contato">
 	<div class="formcont">
-		<h2>Esta com problemas ou quer enviar uma opnião.</h2>
+		<h2>Esta com problemas ou quer enviar um elogio.</h2>
 		<div class="form">
 			<div class="form-group">
 				<input class="form-control" id="" placeholder="Nome:" name="nome"

@@ -10,17 +10,14 @@
 
 		<div class="adcimg">
 
-			<label class="labelInput"> Adicione a imagem<input
-				type="file" name="imagem" class="btn file_customizada"
-				accept="image/png, image/jpeg" multiple />
+			<label class=""> <img class="card-img-top"
+				style="height: 202px;" src="/imagens/imagens/784334.jpg" />
 
 			</label>
 		</div>
 
 		<div class="enter">
-			<c:forEach var="p" items="${contas}">
-				<input name="iduser" value="${p.getIduser()}">
-			</c:forEach>
+
 			<div class="inputs">
 				<input class="inputtitle" type="text" name="titulo"
 					placeholder="Titulo">

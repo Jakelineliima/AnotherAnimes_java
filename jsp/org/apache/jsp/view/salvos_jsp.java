@@ -138,10 +138,8 @@ public final class salvos_jsp extends org.apache.jasper.runtime.HttpJspBase
         do {
           out.write("\r\n");
           out.write("\t\t\t<div class=\"card\" style=\"width: 18rem; margin: 18px auto;\">\r\n");
-          out.write("\t\t\t\t<label class=\"card-img-top\"> <img src=\" ");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.getImagem()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\">\r\n");
-          out.write("\t\t\t\t</label>\r\n");
+          out.write("\t\t\t\t <img class=\"card-img-top\" src=\"/imagens/imagens/784334.jpg\" />\r\n");
+          out.write("\t\t\t\t\r\n");
           out.write("\t\t\t\t<div class=\"card-body\">\r\n");
           out.write("\t\t\t\t\t<h5 class=\"card-title text-center titulo\">");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.getTitulo()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
