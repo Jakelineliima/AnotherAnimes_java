@@ -6,7 +6,7 @@
 
         <form class="adicionar" method="POST" action="alterarsalvo">
             <h2>EDITE AQUI SEUS EPISÓDIOS ASSISTIDOS</h2> 
-			<input type="hidden" name="codigo" value="${salvo.getCodigo()}" />
+			<input type="hidden" name="id_save" value="${salvo.getId_save()}" />
 			
             <div class="adcimg">
 				 <label class="labelInput">Adicione a imagem<input type="file" name="imagem" class="btn file_customizada"  accept="image/png, image/jpeg" value="${salvo.getImagem()}"  multiple/></label>

@@ -1,6 +1,7 @@
 package controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,12 +13,12 @@ import model.Conta;
 
 @Controller
 public class ContaController {
-	
+
 	@GetMapping("/conta")
 	public String conta() {
 		return "conta";
 	}
-	
+
 	@PostMapping("/conta")
 	public String criarConta(HttpServletRequest req, Model m) {
 		Conta p = new Conta();
@@ -29,30 +30,30 @@ public class ContaController {
 		m.addAttribute("texto", texto);
 		return "mensagem";
 	}
-	
+
 	@GetMapping("/minhaconta")
 	public String minhaContas(Model m) {
 		ContaDAO dao = new ContaDAO();
 		m.addAttribute("contas", dao.listarConta());
 		return "minhaconta";
 	}
-	
+
 	@GetMapping("/alterarconta")
 	public String alterarConta(HttpServletRequest req, Model m) {
-		int codigo = Integer.parseInt(req.getParameter("codigo"));
+		int iduser = Integer.parseInt(req.getParameter("iduser"));
 		ContaDAO dao = new ContaDAO();
-		m.addAttribute("conta", dao.getContaPorCodigo(codigo));
+		m.addAttribute("conta", dao.getContaPorCodigo(iduser));
 		return "alterarconta";
 	}
-	
+
 	@PostMapping("/alterarconta")
 	public String atualizarConta(HttpServletRequest req, Model m) {
-		int codigo = Integer.parseInt(req.getParameter("codigo"));
+		int iduser = Integer.parseInt(req.getParameter("iduser"));
 		String nome = req.getParameter("nome");
 		String email = req.getParameter("email");
 		String senha = req.getParameter("senha");
 		Conta p = new Conta();
-		p.setCodigo(codigo);
+		p.setIduser(iduser);
 		p.setNome(nome);
 		p.setEmail(email);
 		p.setSenha(senha);
@@ -60,16 +61,34 @@ public class ContaController {
 		m.addAttribute("texto", dao.salvar(p));
 		return "mensagem";
 	}
-	
+
 	@GetMapping("/excluirconta")
 	public String excluirConta(HttpServletRequest req, Model m) {
-		int codigo = Integer.parseInt(req.getParameter("codigo"));
+		int iduser = Integer.parseInt(req.getParameter("iduser"));
 		ContaDAO dao = new ContaDAO();
-		m.addAttribute("texto", dao.excluir(codigo));
-		return"mensagem";
+		m.addAttribute("texto", dao.excluir(iduser));
+		return "mensagem";
 	}
 	
-	
-}
-	
 
+	@PostMapping("login")
+	public String efetuaLogin(HttpServletRequest req, HttpSession session) {
+		String email = req.getParameter("email");
+		String senha = req.getParameter("senha");
+		ContaDAO dao = new ContaDAO();
+		Conta u = dao.efetuarLogin(email, senha);
+		if (u != null) {
+			session.setAttribute("usuarioLogado", u.getNome());
+			return "index";
+		} else {
+			return "redirect:login";
+		}
+	}
+
+	@GetMapping("logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:login";
+	}
+
+}

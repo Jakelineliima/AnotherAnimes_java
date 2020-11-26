@@ -5,8 +5,10 @@
 	<h1>SOBRE</h1>
 </div>
 <div class="text_1">
-	<button type="button" class="btn btn-primary" data-toggle="modal"
-		data-target="#ModalLongoExemplo">Ingles</button>
+	<div class="edits">
+		<a type="button" style="background: #2E2759; color: #fff;" class="btn"
+			data-toggle="modal" data-target="#ModalLongoExemplo">Ingles</a>
+	</div>
 	<h2>COMO SURGIU A ANOTHERANIMES?</h2>
 	<p>AnotherAnimes pensou na necessidade de alguns usuários que
 		geralmente enfrentam quando assistem em diversos lugares suas séries,
@@ -32,8 +34,9 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="TituloModalLongoExemplo">HOW WAS IT
-					CREATED ANOTHERANIMES?</h5>
+				<h5 class="modal-title font-weight-bold"
+					id="TituloModalLongoExemplo" style="color: #2E2759;">HOW WAS
+					IT CREATED ANOTHERANIMES?</h5>
 			</div>
 			<div class="modal-body">AnotherAnimes thought of the need of
 				some users that usually face when watching their series, anime and
@@ -41,7 +44,8 @@
 				left off, we offer the option of always keeping your episodes up to
 				date.</div>
 			<div class="modal-header">
-				<h5 class="modal-title" id="TituloModalLongoExemplo">WHEN WAS
+				<h5 class="modal-title font-weight-bold"
+					id="TituloModalLongoExemplo" style="color: #2E2759;">WHEN WAS
 					IT CREATED ?</h5>
 			</div>
 			<div class="modal-body">

@@ -64,8 +64,8 @@ public final class alterarsalvo_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\r\n");
       out.write("        <form class=\"adicionar\" method=\"POST\" action=\"alterarsalvo\">\r\n");
       out.write("            <h2>EDITE AQUI SEUS EPISÓDIOS ASSISTIDOS</h2> \r\n");
-      out.write("\t\t\t<input type=\"hidden\" name=\"codigo\" value=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${salvo.getCodigo()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\t\t\t<input type=\"hidden\" name=\"id_save\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${salvo.getId_save()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\" />\r\n");
       out.write("\t\t\t\r\n");
       out.write("            <div class=\"adcimg\">\r\n");

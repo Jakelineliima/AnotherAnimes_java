@@ -10,7 +10,7 @@
             <h1>Faça login e aproveite!</h1>
         </div>
         <div class="formulario container">
-            <form action="UsuarioController" method="post">
+            <form action="login" method="POST">
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="E-mail" name="email">

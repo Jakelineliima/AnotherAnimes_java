@@ -2,22 +2,19 @@ package model;
 
 
 public class Adicionar {
-	private int codigo;
+	private int id_save ;
 	private String titulo;
 	private String temporada;
 	private String episodio;
 	private String imagem;
 
 	
-
-	public int getCodigo() {
-		return codigo;
+	public int getId_save() {
+		return id_save;
 	}
-
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+	public void setId_save(int id_save) {
+		this.id_save = id_save;
 	}
-	
 	public String getTitulo() {
 		return titulo;
 	}

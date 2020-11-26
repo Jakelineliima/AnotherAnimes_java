@@ -41,21 +41,21 @@ public class AdicionarController {
 	
 	@GetMapping("/alterarsalvo")
 	public String alterarSalvo(HttpServletRequest req, Model m) {
-		int codigo = Integer.parseInt(req.getParameter("codigo"));
+		int id_save = Integer.parseInt(req.getParameter("id_save"));
 		AdicionarDAO dao = new AdicionarDAO();
-		m.addAttribute("salvo", dao.getSalvoPorCodigo(codigo));
+		m.addAttribute("salvo", dao.getSalvoPorCodigo(id_save));
 		return "alterarsalvo";
 	}
 	
 	@PostMapping("/alterarsalvo")
 	public String atualizarSalvo(HttpServletRequest req, Model m) {
-		int codigo = Integer.parseInt(req.getParameter("codigo"));
+		int id_save = Integer.parseInt(req.getParameter("id_save"));
 		String titulo = req.getParameter("titulo");
 		String temporada= req.getParameter("temporada");
 		String episodio = req.getParameter("episodio");
 		String imagem = req.getParameter("imagem");
 		Adicionar s = new Adicionar();
-		s.setCodigo(codigo);
+		s.setId_save(id_save);
 		s.setTitulo(titulo);
 		s.setTemporada(temporada);
 		s.setEpisodio(episodio);
@@ -67,9 +67,9 @@ public class AdicionarController {
 	
 	@GetMapping("/excluirsalvo")
 	public String excluirSalvo(HttpServletRequest req, Model m) {
-		int codigo = Integer.parseInt(req.getParameter("codigo"));
+		int id_save = Integer.parseInt(req.getParameter("id_save"));
 		AdicionarDAO dao = new AdicionarDAO();
-		m.addAttribute("texto", dao.excluir(codigo));
+		m.addAttribute("texto", dao.excluir(id_save));
 		return"mensagem";
 	}
 	

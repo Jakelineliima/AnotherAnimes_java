@@ -11,7 +11,7 @@
         <div class="formulario">
             <form class="container" method="POST" action="/alterarconta">
                 <div class="form-group">
-                <input type="hidden" name="codigo" value="${conta.getCodigo()}" />
+                <input type="hidden" name="iduser" value="${conta.getIduser()}" />
                     <input  type="text" class="form-control" id="exampleInputName" aria-describedby="namelHelp"
                         placeholder="Nome" name="nome" value="${conta.getNome()}" />
                         

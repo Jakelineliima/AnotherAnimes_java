@@ -69,8 +69,8 @@ public final class alterarconta_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <div class=\"formulario\">\r\n");
       out.write("            <form class=\"container\" method=\"POST\" action=\"/alterarconta\">\r\n");
       out.write("                <div class=\"form-group\">\r\n");
-      out.write("                <input type=\"hidden\" name=\"codigo\" value=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${conta.getCodigo()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("                <input type=\"hidden\" name=\"iduser\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${conta.getIduser()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\" />\r\n");
       out.write("                    <input  type=\"text\" class=\"form-control\" id=\"exampleInputName\" aria-describedby=\"namelHelp\"\r\n");
       out.write("                        placeholder=\"Nome\" name=\"nome\" value=\"");

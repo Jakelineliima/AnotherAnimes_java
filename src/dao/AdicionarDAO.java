@@ -21,9 +21,9 @@ public class AdicionarDAO {
 	
 	public String salvar(Adicionar s) {
 		String sql;
-		if (s.getCodigo() > 0) {
+		if (s.getId_save() > 0) {
 			sql = " UPDATE salvos SET titulo = ?, temporada = ?, episodio = ?, "+
-				  " imagem = ? WHERE codigo = ? ";
+				  " imagem = ? WHERE id_save = ? ";
 		}else {
 			sql = "INSERT INTO salvos (titulo, temporada, episodio, imagem)" +
 	                 " VALUES (?,?,?,?) ";
@@ -35,8 +35,8 @@ public class AdicionarDAO {
 			ps.setString(2, s.getTemporada());
 			ps.setString(3, s.getEpisodio());
 			ps.setString(4, s.getImagem());
-			if (s.getCodigo() > 0)
-				ps.setInt(5, s.getCodigo());
+			if (s.getId_save() > 0)
+				ps.setInt(5, s.getId_save());
 			ps.executeUpdate();
 			ps.close();			
 			return "Seu anime/serie foi salvo";
@@ -54,7 +54,7 @@ public class AdicionarDAO {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				Adicionar s = new Adicionar();
-				s.setCodigo(rs.getInt("codigo"));
+				s.setId_save(rs.getInt("id_save"));
 				s.setTitulo(rs.getString("titulo"));
 				s.setTemporada(rs.getString("temporada"));
 				s.setEpisodio(rs.getString("episodio"));
@@ -70,16 +70,16 @@ public class AdicionarDAO {
 
 	}
 	
-	public Adicionar getSalvoPorCodigo(int codigo) {
+	public Adicionar getSalvoPorCodigo(int id_save) {
 		String sql = " SELECT * FROM salvos "+
-				     " WHERE codigo = ? ";
+				     " WHERE id_save = ? ";
 		try {
 			PreparedStatement ps = this.con.prepareStatement(sql);
-			ps.setInt(1, codigo);
+			ps.setInt(1, id_save);
 			ResultSet rs = ps.executeQuery();
 			rs.next();
 			Adicionar s = new Adicionar();
-			s.setCodigo(rs.getInt("codigo"));
+			s.setId_save(rs.getInt("id_save"));
 			s.setTitulo(rs.getString("titulo"));
 			s.setTemporada(rs.getString("temporada"));
 			s.setEpisodio(rs.getString("episodio"));
@@ -93,7 +93,7 @@ public class AdicionarDAO {
 	}
 	//EXCLUIR//
 	public String excluir(int codigo) {
-		String sql = "DELETE FROM salvos WHERE codigo = ?";
+		String sql = "DELETE FROM salvos WHERE id_save = ?";
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, codigo);

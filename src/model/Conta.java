@@ -1,16 +1,17 @@
 package model;
 
 public class Conta {
-	private int codigo;
+	private int iduser;
 	private String nome;
 	private String email;
 	private String senha;
 	
-	public int getCodigo() {
-		return codigo;
+
+	public int getIduser() {
+		return iduser;
 	}
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+	public void setIduser(int iduser) {
+		this.iduser = iduser;
 	}
 	public String getNome() {
 		return nome;

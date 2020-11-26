@@ -83,9 +83,6 @@ public final class contato_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
-      out.write("\t<button  type=\"submit\"  class=\"btn btn-lg btn-danger\" data-toggle=\"popover\" title=\"TÃ­tulo do popover\" data-content=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${texto}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\">Clique para ver o popover</button>\r\n");
       out.write("\r\n");
       out.write("\t<button style=\"border-radius: 22px;\" type=\"submit\" class=\"btn btncont borda\">Enviar</button>\r\n");
       out.write("\r\n");
