@@ -68,7 +68,8 @@ public final class adicionar_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\t\t<div class=\"adcimg\">\r\n");
       out.write("\r\n");
-      out.write("\t\t\t<label class=\"\"> <img class=\"card-img-top\" style=\"height: 202px;\" src=\"/imagens/imagens/784334.jpg\" />\r\n");
+      out.write("\t\t\t<label class=\"\"> <img class=\"card-img-top\"\r\n");
+      out.write("\t\t\t\tstyle=\"height: 202px;\" src=\"/imagens/imagens/784334.jpg\" />\r\n");
       out.write("\r\n");
       out.write("\t\t\t</label>\r\n");
       out.write("\t\t</div>\r\n");
